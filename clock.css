@@ -1,0 +1,57 @@
+#dial {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: #c2ec1cfc;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#secarm {
+  border-left: 6px solid rgb(128, 0, 0);
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 3px;
+  margin-left: -3px;
+  animation: rotate 60s infinite linear; /**to rotate the arm at this speed automatically**/
+}
+
+#hrarm {
+  border-left: 10px solid rgb(15, 10, 9);
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -3px;
+  margin-top: 3px;
+  animation: rotate 43200s infinite linear; /**to rotate the arm at this speed automatically**/
+}
+#minarm {
+  border-left: 8px solid rgb(73, 21, 177);
+  height: 270px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 3px;
+  margin-left: -3px;
+  animation: rotate 3600s infinite linear; /**to rotate the arm at this speed automatically**/
+}
+@keyframes rotate {
+  /** works on all divs together*/
+  0% {
+    /**start**/
+    transform: rotate(0);
+    transform-origin: center top; /**center because we want it at axis middle and top to rotate and in clockwise**/
+  }
+
+  100% {
+    /**end of rotation /degree of rotation**/
+    transform: rotate(360deg);
+    transform-origin: center top;
+  }
+}
